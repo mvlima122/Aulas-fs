@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<style>
+    /* como está utilizando o form apenas o h2 que estão dentro do form serão mudados */
+    form h2{
+        color: #34495e;
+        margin-bottom: 15px;
+    }
+    form label{
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+</style>
+
+<body style="font-family: Arial, Helvetica, sans-serif; margin-top: 20px; background-color:#f0f0f0;">
+    
+    <!-- TAG DE FORMULÁRIO 
+     A Tag "label" serve para um texte prévio ao input, o atributo "for" tem que receber o mesmo 
+     nome do atributo id presente na tag input -->
+    <h1 style="text-align: center; color: #333;">Faça o seu pedido: Massa&Cia</h1>
+    
+    <hr style="margin-top: 20px;"/>
+    <form style="background-color: #f0f0f0; padding: 20px; border: 1px solid #ccc;
+    border-radius: 5px; max-width: 600px; margin: auto;">
+
+        <h2>Dados do Cliente</h2>
+        <label for="nome_cliente"> Nome: </label>
+        <input  class="meuinput" type="text" id="nome_cliente" placeholder="Nome" name="nome"/>
+        <br/>
+        <label for="email_cliente"> Email: </label>
+        <input type="email" id="email_cliente" placeholder="exemplo@outlook.com" name="email"/>
+        <br/>
+        <hr/>
+        <h2>Endereço</h2>
+        <br/>
+        <label for="bairro_cliente">Bairro</label>
+        <input type="text" placeholder="Bairro" id="bairro_cliente" name="bairro">
+        <br/>
+        <label for="uf_cliente">UF: </label>
+        <input type="text" placeholder="UF" id="uf_cliente" name="uf"/>
+        <!-- Logradouro -->
+        <!-- CEP -->
+        <!-- Localidade -->
+        <!-- Complemento -->
+        <br/>
+     <label for="numero_endereco_cliente">Número: </label>
+     <input type="number" placeholder="numero" id="numero_endereco_cliente" name="numero"/>
+     <br/>
+     <hr/>
+     <h2>Monte a sua pizza</h2>
+     <br/>
+     <p>Borda </p>
+     <br/>
+     <!-- Dois novos valores radio( cria a bolinha de escolha)
+     para type e value, que recebeu um valor genérico, que depende da opção
+     escolhida pelo cliente -->
+     <!-- O name tem que ter um name especifíco -->
+     <input type="radio" id="cheddar" name="borda_pizza" value="cheddar"/>
+     <label for="cheddar">Cheddar</label>
+     <br/>
+     <input type="radio" id="requeijao" name="borda_pizza" value="requeijao"/>
+     <label for="requeijao">Requeijão</label>
+     <br/>
+     <input type="radio" id="chocolate" name="borda_pizza" value="chocolate"/>
+     <label for="chocolate">Chocolate</label>
+
+     <br/>
+    <!-- Select, é uma tag pai -->
+     <label for="sabor">Sabor: </label>
+     <select name="sabor" id="sabor">
+        <option value="4queijos">Quatro queijos</option>
+        <option value="marguerita">Marguerita</option>
+        <option value="frango">Frango</option>
+        <option value="calabresa">Calabresa</option>
+     </select>
+     <br/>
+
+     <p>Adicionais</p> 
+     <!-- checkbox é a caixinha para marcar -->
+     <input type="checkbox" id="queijo" name="adicional1" value="queijo"/>
+     <label for="queijo">Queijo</label>
+     <br/>
+     <input type="checkbox" id="milho" name="adicional2" value="milho"/>
+     <label for="milho">Milho</label>
+     <br/>
+     <input type="checkbox" id="tomate" name="adicional3" value="tomate"/>
+     <label for="tomate">Tomate</label>
+     <br/>
+
+     <label for="obs">Observação</label>
+     <br/>
+     <textarea id="obs" name="obs"></textarea>
+     <br/>
+     <br/>
+     <input type="submit" value="fazer pedido"/>
+</form>
+
+</body>
+</html>
+
+

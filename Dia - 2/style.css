@@ -1,0 +1,15 @@
+
+#cheddar{
+    color: blue;
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+}
+.meuinput{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
