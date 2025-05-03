@@ -1,0 +1,111 @@
+/* Para todas as tag, estas sofreram um tipo de ação */
+* {
+    margin: 0;
+    padding: 0;
+    /* É como se fosse um auto-ajuste da borda */
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: #040622;
+    font-family: Helvetica; 
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    border: solid 1px red;
+    width: 100%;
+    /* vh significa viewport ( está relacionada a toda área visivel) */
+    height: 8vh;
+    padding: 0  18vh;
+}
+
+/* aqui está priorizando a nav que está dentro do header, nesse caso está estilizando a última tag */
+header nav{
+    border: solid 1px yellow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* empurra os elementos para a borda, deixa espaçamentos iguais entre os dois elementos */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h1 a {
+    font-size: 32px;
+}
+/* hover é uma pseudoclasse, pra quando eu passar o mouse sobre o elemento, acontecer algo. */
+header nav h1 a:hover {
+    color: #e3d45f;
+}
+
+header nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #e3d45f;
+}
+
+main {
+    border: solid 1px yellowgreen;
+    width: 100%;
+    height: calc(100vh - 8vh - 3vh);
+    padding: 0 18vh;
+}
+
+main section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+main section .content{ 
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section .content h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main section .content h2 span {
+    color: #e3d45f;
+}
+
+main section .content h3 {
+    font-size: 24px;
+}
+
+main section .content p {
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+footer{
+    border: solid 1px red;
+    width: 100%;
+    height: 3vh;
+}
+
+footer p {
+    text-align: center;
+}
+
