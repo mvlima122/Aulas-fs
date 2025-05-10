@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/footer.css">
      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="shortcut icon" href="./assets/icons8-currículo-30.png" type="image/x-icon">
     <title>Portfolio</title>
 </head>
 <body>
     <header>
         <nav>
-            <h1><a href="#">Portfolio.</a></h1>
+            <h1><a href="#home">Portfolio.</a></h1>
             <!-- ul>li*2 -->
             <ul>
                 <li><a href="">projects</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="#contact">contact</a></li>
                 <li><a href="">about</a></li>
             </ul>
 
         </nav>
     </header>
     <main>
-        <section>
+        <section id="home">
             <div class="content">
                 <!-- a tag span, não possui valor semantico, é utilizada para estilizar apenas uma parte do texto -->
                 <h2>Hi, my name is <span>Rajesh</span>!</h2>
@@ -49,6 +50,32 @@
                     https://images.unsplash.com/photo-1645106281521-86da01d1031d?q=80&amp;w=2080&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </div>
             </div>
+        </section>
+        <section id="contact">
+            <div class="content">
+                <h2>Entre em <span>contato</span></h2>
+                <!-- o form tem um método get, que é buscar dados. -->
+                <!-- quando eu quero enviar dados, utlizo o post. -->
+                <!-- métodos http-->
+                <form method="post">
+                    <label for="nome">Nome</label>
+                    <!-- o id é como se servisse para ativar o meu input, o name está referenciando  o for -->
+                    <input type="text" name="nome"id="nome">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone">
+
+                    <label for="telefone">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </div>
+
         </section>
     </main>
     <footer>
