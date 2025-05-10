@@ -1,0 +1,195 @@
+/* Para todas as tag, estas sofreram um tipo de ação */
+* {
+    margin: 0;
+    padding: 0;
+    /* É como se fosse um auto-ajuste da borda, para não alterar o tamanho da caixa, comprime tudo que tem dentro */
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: #040622;
+    font-family: Helvetica; 
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    width: 100%;
+    /* vh significa viewport height ( está relacionada a toda área visivel da tela), área total da tela, é divida em 100 */
+    height: 8vh;
+    padding: 0  18vh;
+}
+
+/* aqui está priorizando a nav que está dentro do header, nesse caso está estilizando a última tag */
+header nav{
+    width: 100%;
+    height: 100%;
+    /* deixa os elementos alinhados em linha */
+    display: flex;
+    /* empurra os elementos para as extremidades, deixa espaçamentos iguais entre os dois elementos */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h1 a {
+    font-size: 32px;
+}
+/* hover é uma pseudoclasse, pra quando eu passar o mouse sobre o elemento, acontecer algo. */
+header nav h1 a:hover {
+    color: #e3d45f;
+}
+
+header nav ul{
+    display: flex;
+    /* só da pra ser utilizado com display flex */
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #e3d45f;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 8vh - 3vh);
+    padding: 0 18vh;
+}
+
+main section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+main section .content{ 
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centraliza no meio da área visível, relacionado ao eixo x, porém com o flex direction, está relacionado ao eixo y. */
+    justify-content: center;
+}
+
+main section .content h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main section .content h2 span {
+    color: #e3d45f;
+}
+
+main section .content h3 {
+    font-size: 24px;
+}
+
+main section .content p {
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+main section .content ul{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+main section .content ul .download a{
+ width: 180px;
+ height: 50px;
+ margin-right: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 18px;
+ background-color: #e3d45f;
+ color: #040622;
+ /* arredonda a borda*/
+ border-radius: 25px;
+}
+
+main section .content ul .download a:hover{
+    background-color: #040622;
+    color: #e3d45f;
+    border: solid 1px #e3d45f;
+}
+
+main section .content ul .social{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+main section .content ul .social:hover{
+    /* aumenta levemente os ícones. */
+    transform: scale(1.1);
+}
+ 
+main section .content ul .social a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+}
+
+main section .content ul .social a:hover{
+    border: 1px solid #e3d45f;
+    border-radius: 50%;
+    
+}
+
+main section .photo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main section .photo div{
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    /* tudo que estiver vazando, ficará escondido */
+    overflow: hidden;
+    /* está aqui, pois quem está controlando é essa div pai */
+    transition: 0.3s;
+}
+
+main section .photo div img{
+    width: 100%;
+}
+
+main section .photo  div img:hover{
+    transform: scale(1.05);
+}
+
+
+
+footer{
+    width: 100%;
+    height: 3vh;
+}
+
+footer p {
+    /* quando usa flex direction as ordens se invertem, no justify content (x) e align items no eixo y */
+    text-align: center;
+}
+
