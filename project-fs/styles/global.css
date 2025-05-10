@@ -1,0 +1,25 @@
+/* Para todas as tag, estas sofreram um tipo de ação */
+* {
+    margin: 0;
+    padding: 0;
+    /* É como se fosse um auto-ajuste da borda, para não alterar o tamanho da caixa, comprime tudo que tem dentro */
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: #040622;
+    font-family: Poppins; 
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+
